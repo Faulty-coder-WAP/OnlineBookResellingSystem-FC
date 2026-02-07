@@ -1,0 +1,58 @@
+package OnlineBookResellingSystem.OBRS_BackEnd.user.service.ServiceImpl;
+
+import OnlineBookResellingSystem.OBRS_BackEnd.user.dto.UpdateUserDto;
+import OnlineBookResellingSystem.OBRS_BackEnd.user.dto.userDto;
+import OnlineBookResellingSystem.OBRS_BackEnd.user.entity.User;
+import OnlineBookResellingSystem.OBRS_BackEnd.user.enums.AllowedRoles;
+import OnlineBookResellingSystem.OBRS_BackEnd.user.repository.userRepository;
+import OnlineBookResellingSystem.OBRS_BackEnd.user.service.userService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
+
+import java.util.HashSet;
+import java.util.Set;
+
+@Service
+public class userServiceImpl implements userService
+{
+    @Autowired
+    private userRepository repo;
+    @Autowired
+    private PasswordEncoder encoder;
+
+    @Override
+    public userDto registerUser(userDto userdetails)
+    {
+        User newUSer=new User();
+        newUSer.setUserName(userdetails.getUsername());
+        newUSer.setEmail(userdetails.getEmail());
+        newUSer.setPassword(encoder.encode(userdetails.getPassword()));
+        Set<AllowedRoles> user_roles=new HashSet<>();
+        user_roles.add(AllowedRoles.USER);
+        newUSer.setRoles(user_roles);
+        repo.save(newUSer);
+        return userdetails;
+    }
+
+    @Override
+    public String updateUserByUsername(Long id, UpdateUserDto userdetails)
+    {
+       User update=repo.findById(id).orElseThrow();
+       if (userdetails.getUsername()!=null && !userdetails.getUsername().isBlank())
+       {
+           update.setUserName(userdetails.getUsername());
+       }
+        if (userdetails.getPassword()!=null &&!userdetails.getPassword().isBlank())
+        {
+            update.setPassword(encoder.encode(userdetails.getUsername()));
+        }
+        if (userdetails.getEmail()!=null &&!userdetails.getEmail().isBlank())
+        {
+            update.setEmail(userdetails.getEmail());
+        }
+        repo.save(update);
+        return "Details Updated";
+    }
+}
