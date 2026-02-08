@@ -36,7 +36,7 @@ public class securityConfig
                 .sessionManagement(ses->ses.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(req->
                         req.requestMatchers("/auth/login","/api/register").permitAll()
-                                .requestMatchers("/api/greet").hasRole("ADMIN")
+                                .requestMatchers("/api/greet","/books/addbook").hasRole("ADMIN")
                                 .anyRequest().authenticated())
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
                 .formLogin(form-> form.disable())
