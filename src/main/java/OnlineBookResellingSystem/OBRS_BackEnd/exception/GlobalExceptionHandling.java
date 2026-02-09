@@ -15,6 +15,8 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.client.HttpClientErrorException;
+import org.springframework.web.multipart.MaxUploadSizeExceededException;
+import org.springframework.web.multipart.support.MissingServletRequestPartException;
 
 import java.security.SignatureException;
 import java.sql.SQLIntegrityConstraintViolationException;
@@ -56,5 +58,28 @@ public class GlobalExceptionHandling
        return ResponseEntity.status(HttpStatus.FORBIDDEN).body(error_res);
     }
 
+    @ExceptionHandler(MissingServletRequestPartException.class)
+    public ResponseEntity<?> handleReqiredPartMissingException(MissingServletRequestPartException msg)
+    {
+        Map<String,String> response=new HashMap<>();
+        response.put("Error: ","One Of The Required Fileds Are Missing");
+        response.put("Fields ",msg.getRequestPartName());
+        return ResponseEntity.badRequest().body(response);
+    }
+    @ExceptionHandler(MaxUploadSizeExceededException.class)
+    public ResponseEntity<?> maxSizeException(MaxUploadSizeExceededException msg)
+    {
+        Map<String,String> res=new HashMap<>();
+        res.put("Error ",msg.getMessage());
+        return ResponseEntity.badRequest().body(res);
+    }
+
+    @ExceptionHandler(IllegalArgumentException.class)
+    public ResponseEntity<?> notAllowedElementsException(IllegalArgumentException msg)
+    {
+        Map<String,String> response=new HashMap<>();
+        response.put("error ",msg.getMessage());
+        return ResponseEntity.badRequest().body(response);
+    }
 
 }

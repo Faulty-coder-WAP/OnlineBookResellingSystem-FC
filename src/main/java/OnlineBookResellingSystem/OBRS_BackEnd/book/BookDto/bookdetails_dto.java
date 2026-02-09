@@ -15,11 +15,11 @@ public class bookdetails_dto
 {
     @NotBlank
     @Pattern(regexp = "^[A-Za-z0-9]{3,}$")
-    private String book_name;
+    private String bookName;
 
     @NotBlank
     @Pattern(regexp = "^[A-Za-z]{3,}$")
-    private String author_name;
+    private String authorName;
 
     @NotBlank
     @Size(min = 3,max = 100)

@@ -33,10 +33,10 @@ public class AuthService
     public ResponseEntity<TokenHolder>  returnJwtToken(LoginDto secData)throws BadCredentialsException
     {
         Authentication auth=authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(secData.getUsername(),secData.getPassword()));
-        CustomUserDetails dataForToken=(CustomUserDetails) auth.getPrincipal();
+        CustomUserDetails dataForToken=(CustomUserDetails)auth.getPrincipal();
         Set<String> roles=dataForToken.getAuthorities().stream().map(r->r.getAuthority()).map(r->r.substring(5)).collect(Collectors.toSet());
         TokenHolder tkn=new TokenHolder();
-        String jwttkn=jwtHelper.generateToken(dataForToken.getUsername(),roles);
+        String jwttkn=jwtHelper.generateToken(dataForToken.getUsername(),dataForToken.getUserId(),roles);
         tkn.setToken(jwttkn);
         return ResponseEntity.ok().body(tkn);
 

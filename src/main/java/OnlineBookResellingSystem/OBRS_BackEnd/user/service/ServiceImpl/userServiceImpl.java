@@ -32,8 +32,11 @@ public class userServiceImpl implements userService
         Set<AllowedRoles> user_roles=new HashSet<>();
         user_roles.add(AllowedRoles.USER);
         newUSer.setRoles(user_roles);
-        repo.save(newUSer);
-        return userdetails;
+        User user= repo.save(newUSer);
+        userDto response=new userDto();
+        response.setUsername(user.getUserName());
+        response.setEmail(user.getEmail());
+        return response;
     }
 
     @Override
