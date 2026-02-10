@@ -33,16 +33,16 @@ public class BookController
     private Validator validator;
 
     @PostMapping(value = "/addbook",consumes =MediaType.MULTIPART_FORM_DATA_VALUE)
-    public bookdetails_dto addbook(@AuthenticationPrincipal CustomUserDetails user,@Valid @RequestPart("bookdata") String bookdata, @RequestPart("image") MultipartFile image)
+    public bookdetails_dto addbook(@AuthenticationPrincipal CustomUserDetails user,@Valid @RequestPart("bookdata") bookdetails_dto bookdata, @RequestPart("image") MultipartFile image)
     {
-        ObjectMapper mapper = new ObjectMapper();
-        bookdetails_dto dto = mapper.readValue(bookdata, bookdetails_dto.class);
-        Set<ConstraintViolation<bookdetails_dto>> violations =validator.validate(dto);
-        if (!violations.isEmpty())
-        {
-            throw new ConstraintViolationException("One Of The Required Fields Are Empty ",violations);
-        }
-        return service.addbook(user,dto,image);
+//        ObjectMapper mapper = new ObjectMapper();
+//        bookdetails_dto dto = mapper.readValue(bookdata, bookdetails_dto.class);
+//        Set<ConstraintViolation<bookdetails_dto>> violations =validator.validate(dto);
+//        if (!violations.isEmpty())
+//        {
+//            throw new ConstraintViolationException("One Of The Required Fields Are Empty ",violations);
+//        }
+        return service.addbook(user,bookdata,image);
     }
 
     @GetMapping("/allbooks")

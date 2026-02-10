@@ -34,7 +34,7 @@ public class AuthService
     {
         Authentication auth=authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(secData.getUsername(),secData.getPassword()));
         CustomUserDetails dataForToken=(CustomUserDetails)auth.getPrincipal();
-        Set<String> roles=dataForToken.getAuthorities().stream().map(r->r.getAuthority()).map(r->r.substring(5)).collect(Collectors.toSet());
+        Set<String> roles=dataForToken.getAuthorities().stream().map(r->r.getAuthority().substring(5)).collect(Collectors.toSet());
         TokenHolder tkn=new TokenHolder();
         String jwttkn=jwtHelper.generateToken(dataForToken.getUsername(),dataForToken.getUserId(),roles);
         tkn.setToken(jwttkn);

@@ -20,6 +20,7 @@ import org.springframework.web.multipart.support.MissingServletRequestPartExcept
 
 import java.security.SignatureException;
 import java.sql.SQLIntegrityConstraintViolationException;
+import java.time.Instant;
 import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
@@ -40,22 +41,22 @@ public class GlobalExceptionHandling
     @ExceptionHandler(UsernameNotFoundException.class)
     public ResponseEntity<UsernameNotFoundDto> handleUsernameNotFound(usernameNotFound message)
     {
-      UsernameNotFoundDto res=new UsernameNotFoundDto(message.getMessage(),HttpStatus.NOT_FOUND.value(),LocalDateTime.now());
+      UsernameNotFoundDto res=new UsernameNotFoundDto(message.getMessage(),HttpStatus.NOT_FOUND.value(),Instant.now());
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(res);
     }
 
     @ExceptionHandler(DataIntegrityViolationException.class)
     public ResponseEntity<SqlIntergrityviolationDto>  duplicateEmail(DataIntegrityViolationException message)
     {
-        SqlIntergrityviolationDto error=new SqlIntergrityviolationDto("Email Already Linked To Another User",HttpStatus.BAD_REQUEST.value(),LocalDateTime.now());
+        SqlIntergrityviolationDto error=new SqlIntergrityviolationDto("Email Already Linked To Another User",HttpStatus.BAD_REQUEST.value(),Instant.now());
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(error);
     }
 
     @ExceptionHandler(BadCredentialsException.class)
     public ResponseEntity<UsernameNotFoundDto> handlebadCredits(BadCredentialsException msg)
     {
-        UsernameNotFoundDto error_res=new UsernameNotFoundDto("Username or Password is incorrect",HttpStatus.FORBIDDEN.value(),LocalDateTime.now());
-       return ResponseEntity.status(HttpStatus.FORBIDDEN).body(error_res);
+        UsernameNotFoundDto error_res=new UsernameNotFoundDto("Username or Password is incorrect",HttpStatus.NOT_FOUND.value(), Instant.now());
+       return ResponseEntity.status(HttpStatus.NOT_FOUND).body(error_res);
     }
 
     @ExceptionHandler(MissingServletRequestPartException.class)
