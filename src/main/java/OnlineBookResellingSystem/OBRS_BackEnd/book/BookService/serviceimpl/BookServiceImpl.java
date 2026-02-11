@@ -11,6 +11,7 @@ import OnlineBookResellingSystem.OBRS_BackEnd.user.entity.User;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -60,19 +61,36 @@ public class BookServiceImpl implements BookService
     }
 
     @Override
-    public List<responseBookDto> returnAllBooks()
-    {
-        List<BooKDetails> book=repo.findAll();
-        List<responseBookDto> response=book.stream()
-               .map(each->
-                       new responseBookDto(each.getBookName(),
-                               each.getAuthorName(),
-                               each.getUser().getUserName(),
-                               each.getPostedOn(),
-                               each.getDescription(),
-                               each.getPrice(),
-                               each.getImgUrl()))
-               .toList();
-        return response;
+    public List<responseBookDto> returnAllBooks(String search,Pageable pageable) {
+
+        if (search == null) {
+            List<BooKDetails> book = repo.findAll(pageable).getContent();
+            List<responseBookDto> response = book.stream()
+                    .map(each ->
+                            new responseBookDto(each.getBookName(),
+                                    each.getAuthorName(),
+                                    each.getUser().getUserName(),
+                                    each.getPostedOn(),
+                                    each.getDescription(),
+                                    each.getPrice(),
+                                    each.getImgUrl()))
+                    .toList();
+            return response;
+        } else {
+            List<BooKDetails> book = repo.findByName(search, pageable).getContent();
+            List<responseBookDto> response = book.stream()
+                    .map(each ->
+                            new responseBookDto(each.getBookName(),
+                                    each.getAuthorName(),
+                                    each.getUser().getUserName(),
+                                    each.getPostedOn(),
+                                    each.getDescription(),
+                                    each.getPrice(),
+                                    each.getImgUrl()))
+                    .toList();
+            return response;
+        }
     }
 }
+
+

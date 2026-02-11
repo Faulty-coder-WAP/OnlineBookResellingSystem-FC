@@ -7,12 +7,18 @@ import OnlineBookResellingSystem.OBRS_BackEnd.book.BookService.BookService;
 import OnlineBookResellingSystem.OBRS_BackEnd.book.BookService.serviceimpl.BookServiceImpl;
 import OnlineBookResellingSystem.OBRS_BackEnd.security.CustomUserDetails.CustomUserDetails;
 import OnlineBookResellingSystem.OBRS_BackEnd.user.entity.User;
+import jakarta.annotation.Nullable;
 import jakarta.servlet.annotation.MultipartConfig;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.ConstraintViolationException;
 import jakarta.validation.Valid;
 import jakarta.validation.Validator;
+import jakarta.validation.constraints.Pattern;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.properties.bind.DefaultValue;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.MediaType;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
@@ -35,21 +41,21 @@ public class BookController
     @PostMapping(value = "/addbook",consumes =MediaType.MULTIPART_FORM_DATA_VALUE)
     public bookdetails_dto addbook(@AuthenticationPrincipal CustomUserDetails user,@Valid @RequestPart("bookdata") bookdetails_dto bookdata, @RequestPart("image") MultipartFile image)
     {
-//        ObjectMapper mapper = new ObjectMapper();
-//        bookdetails_dto dto = mapper.readValue(bookdata, bookdetails_dto.class);
-//        Set<ConstraintViolation<bookdetails_dto>> violations =validator.validate(dto);
-//        if (!violations.isEmpty())
-//        {
-//            throw new ConstraintViolationException("One Of The Required Fields Are Empty ",violations);
-//        }
         return service.addbook(user,bookdata,image);
     }
 
-    @GetMapping("/allbooks")
-    public List<responseBookDto> returnAllBooks()
+    @GetMapping("/getbooks")
+    public List<responseBookDto> returnAllBooks( @RequestParam(required = false, defaultValue = "4") int pageSize,
+                                                 @RequestParam(required = false,defaultValue = "1") int pageNo,
+                                                 @RequestParam(required = false,defaultValue = "bookId") String sortBy,
+                                                 @RequestParam(required = false,defaultValue = "ASC") String sortDir,
+                                                 @RequestParam(required = false) String by)
     {
-        return service.returnAllBooks();
+        Sort sort=null;
+        sort= (sortDir.equalsIgnoreCase("ASC"))?Sort.by(sortBy).ascending():Sort.by(sortBy).descending();
+        return service.returnAllBooks(by,PageRequest.of(pageNo-1,pageSize,sort));
     }
+
 
 
 }

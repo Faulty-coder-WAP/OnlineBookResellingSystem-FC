@@ -19,14 +19,10 @@ public class CustomUserDetailsService implements UserDetailsService
     @Autowired
     private userRepository repo;
     @Override
-    public UserDetails loadUserByUsername(@NonNull String username) throws UsernameNotFoundException
+    public UserDetails loadUserByUsername(@NonNull String email) throws UsernameNotFoundException
     {
-        User data=repo.findByuserName(username);
-        if (data==null||data.getUserName().isEmpty())
-        {
-            throw new UsernameNotFoundException("User Not Found , Please Register");
-        }
+        User data=repo.findByEmail(email).orElseThrow(()->new UsernameNotFoundException("User Not Found With Provided Details , Register And Login"));
         List<SimpleGrantedAuthority> roles=data.getRoles().stream().map(role->new SimpleGrantedAuthority("ROLE_"+role.name())).toList();
-        return new CustomUserDetails(data.getUser_id(), data.getUserName(),data.getPassword(),roles);
+        return new CustomUserDetails(data.getUser_id(),data.getEmail(),data.getPassword(),roles, data.getUserName());
     }
 }

@@ -26,8 +26,8 @@ public class JwtHelper
         return Jwts
                 .builder()
                 .signWith(getSecrectKey(),SignatureAlgorithm.HS256)
-                .subject(username)
-                .claim("userID",id)
+                .subject(String.valueOf(id))
+                .claim("userName",username)
                 .claim("Roles",roles)
                 .issuedAt(new Date())
                 .expiration(new Date(System.currentTimeMillis()+1000*60*10))

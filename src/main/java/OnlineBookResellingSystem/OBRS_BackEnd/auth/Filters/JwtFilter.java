@@ -66,10 +66,10 @@ public class JwtFilter extends OncePerRequestFilter
                    .toList();
             if (!jwtHelper.isExpired(token))
             {
-                Long id=claims.get("userID",Long.class);
-                CustomUserDetails userData=new CustomUserDetails(id,claims.getSubject(),null,roles);
-            UsernamePasswordAuthenticationToken upat=new UsernamePasswordAuthenticationToken(userData,null,userData.getAuthorities());
-            SecurityContextHolder.getContext().setAuthentication(upat);
+                Long id=Long.parseLong(claims.getSubject());
+                CustomUserDetails userData=new CustomUserDetails(id,null,null,roles,claims.get("userName").toString());
+                UsernamePasswordAuthenticationToken upat=new UsernamePasswordAuthenticationToken(userData,null,userData.getAuthorities());
+                SecurityContextHolder.getContext().setAuthentication(upat);
             }
         }
         filterChain.doFilter(request,response);
