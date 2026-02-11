@@ -15,32 +15,43 @@ import java.util.stream.Collectors;
 
 public class CustomUserDetails implements UserDetails
 {
-    private User details;
+    private final Long id;
+    private final String email;
+    private final Collection<? extends GrantedAuthority> roles;
+    private final String password;
+    private final String userName;
 
-    public CustomUserDetails(User details)
+    public CustomUserDetails(Long id, String username, String password, List<SimpleGrantedAuthority> roles,String userName)
     {
-        this.details = details;
+       this.id=id;
+       this.email=username;
+       this.password=password;
+       this.roles=roles;
+       this.userName = userName;
     }
-
+   public String getName()
+   {
+      return userName;
+   }
     public Long getUserId()
     {
-        return details.getUser_id();
+        return id;
     }
-
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities()
     {
-       Set<AllowedRoles> roles=details.getRoles();
-       return  roles.stream().map(role-> new SimpleGrantedAuthority("ROLE_"+role.name())).collect(Collectors.toSet());
+        return roles;
     }
 
     @Override
-    public @Nullable String getPassword() {
-        return details.getPassword();
+    public @Nullable String getPassword()
+    {
+        return password;
     }
 
     @Override
-    public String getUsername() {
-        return details.getUserName();
+    public String getUsername()
+    {
+        return email;
     }
 }

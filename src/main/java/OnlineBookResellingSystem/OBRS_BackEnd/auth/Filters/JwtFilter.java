@@ -2,6 +2,7 @@ package OnlineBookResellingSystem.OBRS_BackEnd.auth.Filters;
 
 import OnlineBookResellingSystem.OBRS_BackEnd.auth.JwtClasses.JwtHelper;
 import OnlineBookResellingSystem.OBRS_BackEnd.exception.Dto.JwtExceptionDto;
+import OnlineBookResellingSystem.OBRS_BackEnd.security.CustomUserDetails.CustomUserDetails;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtException;
 import jakarta.servlet.FilterChain;
@@ -22,6 +23,8 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 @Component
 public class JwtFilter extends OncePerRequestFilter
@@ -56,15 +59,17 @@ public class JwtFilter extends OncePerRequestFilter
         if (name!=null&& SecurityContextHolder.getContext().getAuthentication()==null)
         {
             Claims claims= jwtHelper.extractClaimsFromToken(token);
-            List<String> roleinpayload=claims.get("Roles",List.class);
+            List<String> roleinpayload=claims.get("Roles", List.class);
             List<SimpleGrantedAuthority> roles=roleinpayload
                    .stream()
                    .map(role->new SimpleGrantedAuthority("ROLE_"+role))
                    .toList();
             if (!jwtHelper.isExpired(token))
             {
-            UsernamePasswordAuthenticationToken upat=new UsernamePasswordAuthenticationToken(claims.getSubject(),null,roles);
-            SecurityContextHolder.getContext().setAuthentication(upat);
+                Long id=Long.parseLong(claims.getSubject());
+                CustomUserDetails userData=new CustomUserDetails(id,null,null,roles,claims.get("userName").toString());
+                UsernamePasswordAuthenticationToken upat=new UsernamePasswordAuthenticationToken(userData,null,userData.getAuthorities());
+                SecurityContextHolder.getContext().setAuthentication(upat);
             }
         }
         filterChain.doFilter(request,response);

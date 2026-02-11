@@ -21,23 +21,22 @@ public class JwtHelper
     @Value("${jwt.secret.key}")
       private  String secKey;
 
-    public String generateToken(String username, Set<String> roles)
+    public String generateToken(String username,Long id,Set<String> roles)
     {
         return Jwts
                 .builder()
                 .signWith(getSecrectKey(),SignatureAlgorithm.HS256)
-                .subject(username)
+                .subject(String.valueOf(id))
+                .claim("userName",username)
                 .claim("Roles",roles)
                 .issuedAt(new Date())
                 .expiration(new Date(System.currentTimeMillis()+1000*60*10))
                 .compact();
     }
-
     private SecretKey getSecrectKey()
     {
         return Keys.hmacShaKeyFor(secKey.getBytes());
     }
-
 
     public String getUsername(String token)
     {
