@@ -14,11 +14,11 @@ import java.time.LocalDateTime;
 public class bookdetails_dto
 {
     @NotBlank
-    @Pattern(regexp = "^[A-Za-z0-9]{3,}$")
+    @Pattern(regexp = "^[A-Za-z0-9]{3,20}$")
     private String bookName;
 
     @NotBlank
-    @Pattern(regexp = "^[A-Za-z]{3,}$")
+    @Pattern(regexp = "^[A-Za-z]{3,20}$")
     private String authorName;
 
     @NotBlank

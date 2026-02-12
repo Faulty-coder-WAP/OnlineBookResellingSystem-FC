@@ -1,7 +1,7 @@
 package OnlineBookResellingSystem.OBRS_BackEnd.auth.Filters;
 
 import OnlineBookResellingSystem.OBRS_BackEnd.auth.JwtClasses.JwtHelper;
-import OnlineBookResellingSystem.OBRS_BackEnd.exception.Dto.JwtExceptionDto;
+import OnlineBookResellingSystem.OBRS_BackEnd.exception.FilterExceptionHandlers.customAuthenticationEntryPoinyHandler;
 import OnlineBookResellingSystem.OBRS_BackEnd.security.CustomUserDetails.CustomUserDetails;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtException;
@@ -12,19 +12,15 @@ import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
-import tools.jackson.databind.ObjectMapper;
+
 
 import java.io.IOException;
-import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
 
 @Component
 public class JwtFilter extends OncePerRequestFilter
@@ -32,46 +28,50 @@ public class JwtFilter extends OncePerRequestFilter
     @Autowired
     private JwtHelper jwtHelper;
 
+    @Autowired
+    private customAuthenticationEntryPoinyHandler authenticationEntryPoinyHandler;
+
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException
     {
         String header=request.getHeader("Authorization");
         String name=null;
         String token =null;
-        if (header!=null&&header.startsWith("Bearer "))
+        if (header==null || !header.startsWith("Bearer "))
         {
+filterChain.doFilter(request,response);
+return;
+        }
             token=header.substring(7);
             try {
-                name=jwtHelper.getUsername(token);
+                name = jwtHelper.getUsername(token);
+                if (name != null && SecurityContextHolder.getContext().getAuthentication() == null) {
+                    Claims claims = jwtHelper.extractClaimsFromToken(token);
+                    List<String> roleinpayload = claims.get("Roles", List.class);
+                    List<SimpleGrantedAuthority> roles = roleinpayload
+                            .stream()
+                            .map(role -> new SimpleGrantedAuthority("ROLE_" + role))
+                            .toList();
+                    if (!jwtHelper.isExpired(token)) {
+                        Long id = Long.parseLong(claims.getSubject());
+                        CustomUserDetails userData = new CustomUserDetails(id, null, null, roles, claims.get("userName").toString());
+                        UsernamePasswordAuthenticationToken upat = new UsernamePasswordAuthenticationToken(userData, null, userData.getAuthorities());
+                        SecurityContextHolder.getContext().setAuthentication(upat);
+                    }
+                }
+                filterChain.doFilter(request,response);
             }
-            catch (JwtException ex)
+            catch (AuthenticationException exception)
             {
-                response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
-                response.setContentType("application/json");
-                JwtExceptionDto dto = new JwtExceptionDto(
-                        "Token expired or invalid Please Login Again",
-                        401,
-                        LocalDateTime.now()
-                );
-                new ObjectMapper().writeValue(response.getOutputStream(),dto);
+                SecurityContextHolder.clearContext();
+                authenticationEntryPoinyHandler.commence(request, response,exception);
+                return;
             }
-        }
-        if (name!=null&& SecurityContextHolder.getContext().getAuthentication()==null)
-        {
-            Claims claims= jwtHelper.extractClaimsFromToken(token);
-            List<String> roleinpayload=claims.get("Roles", List.class);
-            List<SimpleGrantedAuthority> roles=roleinpayload
-                   .stream()
-                   .map(role->new SimpleGrantedAuthority("ROLE_"+role))
-                   .toList();
-            if (!jwtHelper.isExpired(token))
+            catch (JwtException exception)
             {
-                Long id=Long.parseLong(claims.getSubject());
-                CustomUserDetails userData=new CustomUserDetails(id,null,null,roles,claims.get("userName").toString());
-                UsernamePasswordAuthenticationToken upat=new UsernamePasswordAuthenticationToken(userData,null,userData.getAuthorities());
-                SecurityContextHolder.getContext().setAuthentication(upat);
+                SecurityContextHolder.clearContext();
+                authenticationEntryPoinyHandler.commence(request, response, new BadCredentialsException("Invalid Or Expired token"));
+                return;
             }
-        }
-        filterChain.doFilter(request,response);
     }
 }
