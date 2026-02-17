@@ -2,6 +2,7 @@ package OnlineBookResellingSystem.OBRS_BackEnd.user.service.ServiceImpl;
 
 import OnlineBookResellingSystem.OBRS_BackEnd.user.dto.UpdateUserDto;
 import OnlineBookResellingSystem.OBRS_BackEnd.user.dto.userDto;
+import OnlineBookResellingSystem.OBRS_BackEnd.user.dto.userListDto;
 import OnlineBookResellingSystem.OBRS_BackEnd.user.entity.User;
 import OnlineBookResellingSystem.OBRS_BackEnd.user.enums.AllowedRoles;
 import OnlineBookResellingSystem.OBRS_BackEnd.user.repository.userRepository;
@@ -11,7 +12,9 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Service
@@ -57,5 +60,16 @@ public class userServiceImpl implements userService
         }
         repo.save(update);
         return "Details Updated";
+    }
+
+    @Override
+    public List<userListDto> getAllUsers()
+    {
+        List<User> data=repo.findAll();
+        List<userListDto> response=data
+                .stream()
+                .map(user->new userListDto(user.getUserName(),user.getEmail()))
+                .toList();
+        return response;
     }
 }

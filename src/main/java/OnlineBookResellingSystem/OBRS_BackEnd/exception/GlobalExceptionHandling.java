@@ -82,8 +82,8 @@ public class GlobalExceptionHandling
     @ExceptionHandler(HttpMessageNotReadableException.class)
     public ResponseEntity<?> wrongFormatHandler(HttpMessageNotReadableException msg,HttpServletRequest request)
     {
-        errorResponse res=new errorResponse(LocalDateTime.now(),HttpStatus.NOT_ACCEPTABLE.value(),HttpStatus.NOT_ACCEPTABLE.getReasonPhrase(),msg.getMessage(),request.getRequestURI());
-        return ResponseEntity.status(HttpStatus.NOT_ACCEPTABLE).body(res);
+        errorResponse res=new errorResponse(LocalDateTime.now(),HttpStatus.BAD_REQUEST.value(),HttpStatus.BAD_REQUEST.getReasonPhrase(),"Requests Fields Are Violated",request.getRequestURI());
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(res);
     }
 
     @ExceptionHandler(AccessDeniedException.class)
@@ -106,5 +106,6 @@ public class GlobalExceptionHandling
         errorResponse res=new errorResponse(LocalDateTime.now(),HttpStatus.BAD_REQUEST.value(),HttpStatus.BAD_REQUEST.getReasonPhrase(),"Invalid Sort Field",request.getRequestURI());
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(res);
     }
+
 
 }

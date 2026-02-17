@@ -45,9 +45,10 @@ public class securityConfig
                 .csrf(AbstractHttpConfigurer::disable)
                 .sessionManagement(ses->ses.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(req->
-                        req.requestMatchers("/auth/login","/api/register").permitAll()
-                                .requestMatchers("/books/addbook","/books/getbooks").hasRole("USER")
-                                .requestMatchers(HttpMethod.GET,"/api/greet/**").hasRole("ADMIN")
+                        req.requestMatchers("/auth/login","/api/register","/books/getbooks").permitAll()
+                                .requestMatchers("/swagger-ui/**","/v3/**").permitAll()
+                                .requestMatchers("/books/addbook","/api/update_user/**").hasRole("USER")
+                                .requestMatchers(HttpMethod.GET,"/api/greet/**","/api/get_users").hasRole("ADMIN")
                                 .anyRequest().authenticated())
                 .exceptionHandling(exception->exception
                         .authenticationEntryPoint(authenticationEntryPoinyHandler)
