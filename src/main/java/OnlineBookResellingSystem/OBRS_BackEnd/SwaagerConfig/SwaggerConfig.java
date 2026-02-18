@@ -1,7 +1,10 @@
 package OnlineBookResellingSystem.OBRS_BackEnd.SwaagerConfig;
 
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
+import io.swagger.v3.oas.models.security.SecurityScheme;
 import io.swagger.v3.oas.models.tags.Tag;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,10 +20,9 @@ public class SwaggerConfig {
                 .info(
                         new Info()
                                 .title("Online Book Reselling System Api's")
-                                .description("By Faulty_Coder(E Sai Ganesh)")
-                ).tags(Arrays.asList(
-                        new Tag().name("User Details Api's"),
-                        new Tag().name("Authentication Api's")
-                ));
+                                .description("By Faulty_Coder(E Sai Ganesh)"));
     }
+
+
+
 }

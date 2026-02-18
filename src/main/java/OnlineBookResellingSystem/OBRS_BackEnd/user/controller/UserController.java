@@ -8,6 +8,7 @@ import OnlineBookResellingSystem.OBRS_BackEnd.user.entity.User;
 import OnlineBookResellingSystem.OBRS_BackEnd.user.service.ServiceImpl.userServiceImpl;
 import OnlineBookResellingSystem.OBRS_BackEnd.user.service.userService;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
