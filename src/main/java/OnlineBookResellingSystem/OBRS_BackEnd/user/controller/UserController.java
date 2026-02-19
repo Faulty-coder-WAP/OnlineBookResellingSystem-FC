@@ -12,6 +12,7 @@ import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
@@ -27,21 +28,21 @@ public class UserController
 
     @PostMapping("/register")
     @Operation(summary = "User Registration")
-    public userDto registerUser(@Valid @RequestBody userDto data)
+    public ResponseEntity<userDto> registerUser(@Valid @RequestBody userDto data)
     {
         return service.registerUser(data);
     }
 
     @PatchMapping("/update_user/me")
     @Operation(summary = "User Details Update")
-    public String updateUser(@AuthenticationPrincipal CustomUserDetails user, @Valid @RequestBody UpdateUserDto data)
+    public ResponseEntity<String> updateUser(@AuthenticationPrincipal CustomUserDetails user, @Valid @RequestBody UpdateUserDto data)
     {
         return service.updateUserByUsername(user.getUserId(),data);
     }
 
     @GetMapping("/get_users")
     @Operation(summary = "Admin Only Access For Getting All Registered User")
-    public List<userListDto> getAllUsers()
+    public ResponseEntity<List<userListDto>> getAllUsers()
     {
         return service.getAllUsers();
     }

@@ -6,6 +6,7 @@ import OnlineBookResellingSystem.OBRS_BackEnd.book.BookEntity.BooKDetails;
 import OnlineBookResellingSystem.OBRS_BackEnd.book.BookRepository.BookRepository;
 import OnlineBookResellingSystem.OBRS_BackEnd.book.BookService.BookService;
 import OnlineBookResellingSystem.OBRS_BackEnd.book.BookService.CloudinaryConfig.ClodinaryService;
+import OnlineBookResellingSystem.OBRS_BackEnd.book.enums.statusClass;
 import OnlineBookResellingSystem.OBRS_BackEnd.exception.bookNotFoundException;
 import OnlineBookResellingSystem.OBRS_BackEnd.security.CustomUserDetails.CustomUserDetails;
 import OnlineBookResellingSystem.OBRS_BackEnd.user.entity.User;
@@ -59,15 +60,16 @@ public class BookServiceImpl implements BookService
         Long id= user.getUserId();
         User userdata=entityManager.getReference(User.class,id);
         data.setUser(userdata);
+        data.setStatus("PENDING");
         repo.save(data);
         return bookdata;
     }
 
     @Override
-    public List<responseBookDto> returnAllBooks(String search,Pageable pageable) {
+    public List<responseBookDto> returnAllBooks(String status,String search,Pageable pageable) {
 
         if (search == null) {
-            List<BooKDetails> book = repo.findAll(pageable).getContent();
+            List<BooKDetails> book = repo.findAllByStatus(status,pageable);
             List<responseBookDto> response = book.stream()
                     .map(each ->
                             new responseBookDto(each.getBookId(), each.getBookName(),
@@ -76,16 +78,13 @@ public class BookServiceImpl implements BookService
                                     each.getPostedOn(),
                                     each.getDescription(),
                                     each.getPrice(),
-                                    each.getImgUrl()))
+                                    each.getImgUrl(),
+                                    each.getStatus()))
                     .toList();
             return response;
         } else {
 
-            List<BooKDetails> book = repo.findByName(search, pageable).getContent();
-//            if (book.isEmpty())
-//            {
-//                throw new bookNotFoundException("book Not Found With Name");
-//            }
+            List<BooKDetails> book = repo.findByNameAndStatus(status,search, pageable).getContent();
             List<responseBookDto> response = book.stream()
                     .map(each ->
                             new responseBookDto(each.getBookId(),each.getBookName(),
@@ -94,7 +93,8 @@ public class BookServiceImpl implements BookService
                                     each.getPostedOn(),
                                     each.getDescription(),
                                     each.getPrice(),
-                                    each.getImgUrl()))
+                                    each.getImgUrl(),
+                                    each.getStatus()))
                     .toList();
             return response;
         }

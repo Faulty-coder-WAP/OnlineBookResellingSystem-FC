@@ -14,7 +14,7 @@ public interface BookService
 
     bookdetails_dto addbook(CustomUserDetails user, bookdetails_dto bookdata, MultipartFile image);
 
-    List<responseBookDto> returnAllBooks(String search,Pageable pageable);
+    List<responseBookDto> returnAllBooks(String status,String search,Pageable pageable);
 
     bookdetails_dto updateBook(CustomUserDetails user, responseBookDto updateBookDto);
 

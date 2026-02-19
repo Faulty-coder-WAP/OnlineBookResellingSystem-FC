@@ -44,14 +44,15 @@ public class BookController
                                                  @RequestParam(required = false,defaultValue = "1") int pageNo,
                                                  @RequestParam(required = false,defaultValue = "bookId") String sortBy,
                                                  @RequestParam(required = false,defaultValue = "ASC") String sortDir,
-                                                 @RequestParam(required = false) String by)  {
+                                                 @RequestParam(required = false) String by)
+    {
         if (pageSize>20)
         {
             throw  new IllegalArgumentException("PageSize Can`t Exceeded 20 ");
         }
         Sort sort=null;
         sort= (sortDir.equalsIgnoreCase("ASC"))?Sort.by(sortBy).ascending():Sort.by(sortBy).descending();
-        return service.returnAllBooks(by,PageRequest.of(pageNo-1,pageSize,sort));
+        return service.returnAllBooks("ACTIVE",by,PageRequest.of(pageNo-1,pageSize,sort));
     }
 
     @PostMapping("/updatebook")

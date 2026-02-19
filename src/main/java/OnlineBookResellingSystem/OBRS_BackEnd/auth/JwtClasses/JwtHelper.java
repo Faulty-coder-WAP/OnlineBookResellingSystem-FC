@@ -30,7 +30,7 @@ public class JwtHelper
                 .claim("userName",username)
                 .claim("Roles",roles)
                 .issuedAt(new Date())
-                .expiration(new Date(System.currentTimeMillis()+1000*60*10))
+                .expiration(new Date(System.currentTimeMillis()+1000*60*60))
                 .compact();
     }
     private SecretKey getSecrectKey()

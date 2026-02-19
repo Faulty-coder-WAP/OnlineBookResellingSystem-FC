@@ -32,4 +32,5 @@ public class responseBookDto
     @Max(10000)
     private Integer price;
     private String imageUrl;
+    private String status;
 }

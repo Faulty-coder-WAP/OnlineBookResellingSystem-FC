@@ -8,6 +8,8 @@ import OnlineBookResellingSystem.OBRS_BackEnd.user.enums.AllowedRoles;
 import OnlineBookResellingSystem.OBRS_BackEnd.user.repository.userRepository;
 import OnlineBookResellingSystem.OBRS_BackEnd.user.service.userService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -26,7 +28,7 @@ public class userServiceImpl implements userService
     private PasswordEncoder encoder;
 
     @Override
-    public userDto registerUser(userDto userdetails)
+    public ResponseEntity<userDto> registerUser(userDto userdetails)
     {
         User newUSer=new User();
         newUSer.setUserName(userdetails.getUsername());
@@ -39,11 +41,11 @@ public class userServiceImpl implements userService
         userDto response=new userDto();
         response.setUsername(user.getUserName());
         response.setEmail(user.getEmail());
-        return response;
+        return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
 
     @Override
-    public String updateUserByUsername(Long id, UpdateUserDto userdetails)
+    public ResponseEntity<String> updateUserByUsername(Long id, UpdateUserDto userdetails)
     {
        User update=repo.findById(id).orElseThrow();
        if (userdetails.getUsername()!=null && !userdetails.getUsername().isBlank())
@@ -59,17 +61,17 @@ public class userServiceImpl implements userService
             update.setEmail(userdetails.getEmail());
         }
         repo.save(update);
-        return "Details Updated";
+        return ResponseEntity.status(HttpStatus.OK).body("Details Updated");
     }
 
     @Override
-    public List<userListDto> getAllUsers()
+    public ResponseEntity<List<userListDto>> getAllUsers()
     {
         List<User> data=repo.findAll();
         List<userListDto> response=data
                 .stream()
                 .map(user->new userListDto(user.getUserName(),user.getEmail()))
                 .toList();
-        return response;
+        return ResponseEntity.status(HttpStatus.OK).body(response);
     }
 }

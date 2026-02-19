@@ -15,14 +15,12 @@ import java.util.List;
 @Configuration
 public class SwaggerConfig {
     @Bean
-    public OpenAPI mySwaggerConfiguration() {
+    public OpenAPI mySwaggerConfiguration()
+    {
         return new OpenAPI()
                 .info(
                         new Info()
                                 .title("Online Book Reselling System Api's")
                                 .description("By Faulty_Coder(E Sai Ganesh)"));
     }
-
-
-
 }
