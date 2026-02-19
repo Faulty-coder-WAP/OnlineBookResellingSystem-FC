@@ -33,6 +33,7 @@ public class BooKDetails
     private String description;
     private String imgUrl;
     private int price;
+    private String status;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_user_id")
     private User user;

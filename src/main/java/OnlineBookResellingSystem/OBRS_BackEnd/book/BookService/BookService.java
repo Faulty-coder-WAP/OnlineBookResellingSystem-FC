@@ -2,7 +2,6 @@ package OnlineBookResellingSystem.OBRS_BackEnd.book.BookService;
 
 import OnlineBookResellingSystem.OBRS_BackEnd.book.BookDto.bookdetails_dto;
 import OnlineBookResellingSystem.OBRS_BackEnd.book.BookDto.responseBookDto;
-import OnlineBookResellingSystem.OBRS_BackEnd.book.BookEntity.BooKDetails;
 import OnlineBookResellingSystem.OBRS_BackEnd.security.CustomUserDetails.CustomUserDetails;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.multipart.MultipartFile;
@@ -15,7 +14,8 @@ public interface BookService
 
     bookdetails_dto addbook(CustomUserDetails user, bookdetails_dto bookdata, MultipartFile image);
 
-    List<responseBookDto> returnAllBooks(String search,Pageable pageable);
+    List<responseBookDto> returnAllBooks(String status,String search,Pageable pageable);
 
+    bookdetails_dto updateBook(CustomUserDetails user, responseBookDto updateBookDto);
 
 }
