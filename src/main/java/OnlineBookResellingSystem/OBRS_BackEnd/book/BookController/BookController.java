@@ -55,7 +55,7 @@ public class BookController
         return service.returnAllBooks("ACTIVE",by,PageRequest.of(pageNo-1,pageSize,sort));
     }
 
-    @PostMapping("/updatebook")
+    @PatchMapping("/updatebook")
     @Operation(summary = "Update Details Of Book Listed")
     public bookdetails_dto returnUpdatedBook(@AuthenticationPrincipal CustomUserDetails user, @Valid @RequestBody responseBookDto ubd)
     {

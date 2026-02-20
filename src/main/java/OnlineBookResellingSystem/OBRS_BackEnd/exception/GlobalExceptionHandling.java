@@ -39,7 +39,7 @@ public class GlobalExceptionHandling
                 return ResponseEntity.badRequest().body(res);
     }
 
-    @ExceptionHandler(UsernameNotFoundException.class)
+    @ExceptionHandler(usernameNotFound.class)
     public ResponseEntity<errorResponse> handleUsernameNotFound(usernameNotFound message, HttpServletRequest request)
     {
      errorResponse res=new errorResponse(LocalDateTime.now(),HttpStatus.NOT_FOUND.value(),HttpStatus.NOT_FOUND.getReasonPhrase(),message.getMessage(),request.getRequestURI());
@@ -49,15 +49,15 @@ public class GlobalExceptionHandling
     @ExceptionHandler(DataIntegrityViolationException.class)
     public ResponseEntity<errorResponse>  duplicateEmail(DataIntegrityViolationException message,HttpServletRequest request)
     {
-        errorResponse res=new errorResponse(LocalDateTime.now(),HttpStatus.BAD_REQUEST.value(),HttpStatus.BAD_REQUEST.getReasonPhrase(),message.getMessage(),request.getRequestURI());
+        errorResponse res=new errorResponse(LocalDateTime.now(),HttpStatus.BAD_REQUEST.value(),HttpStatus.BAD_REQUEST.getReasonPhrase(),"Request violates data constraints (possibly duplicate/invalid value).",request.getRequestURI());
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(res);
     }
 
     @ExceptionHandler(BadCredentialsException.class)
     public ResponseEntity<errorResponse> handlebadCredits(BadCredentialsException msg,HttpServletRequest request)
     {
-        errorResponse res=new errorResponse(LocalDateTime.now(),HttpStatus.NOT_FOUND.value(),HttpStatus.NOT_FOUND.getReasonPhrase(),msg.getMessage(),request.getRequestURI());
-       return ResponseEntity.status(HttpStatus.NOT_FOUND).body(res);
+        errorResponse res=new errorResponse(LocalDateTime.now(),HttpStatus.UNAUTHORIZED.value(),HttpStatus.UNAUTHORIZED.getReasonPhrase(),msg.getMessage(),request.getRequestURI());
+       return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(res);
     }
 
     @ExceptionHandler(MissingServletRequestPartException.class)

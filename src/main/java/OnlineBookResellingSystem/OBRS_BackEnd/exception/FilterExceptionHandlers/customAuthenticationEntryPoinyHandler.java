@@ -19,14 +19,11 @@ public class customAuthenticationEntryPoinyHandler implements AuthenticationEntr
     {
         response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
         response.setContentType("application/json");
-        response.getWriter().write("""
-        {
-            "timestamp": "%s",
-            "status": 401,
-            "error": "Unauthorized",
-            "message": "%s",
-            "path": "%s"
-        }
-        """.formatted(LocalDateTime.now(),msg.getMessage(),request.getRequestURI()));
+        String body = String.format(
+                "{\"timestamp\":\"%s\",\"status\":401,\"error\":\"Unauthorized\",\"message\":\"%s\",\"path\":\"%s\"}",
+                LocalDateTime.now(),
+                msg.getMessage(),
+                request.getRequestURI());
+        response.getWriter().write(body);
     }
 }

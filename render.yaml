@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: obrs-backend
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true
+    healthCheckPath: /books/getbooks
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
+      - key: PORT
+        value: 10000
+      - key: DB_URL
+        sync: false
+      - key: DB_USERNAME
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: JWT_KEY
+        sync: false
+      - key: cloudinary_cloudname
+        sync: false
+      - key: cloudinary_apikey
+        sync: false
+      - key: cloudinary_apisk
+        sync: false
