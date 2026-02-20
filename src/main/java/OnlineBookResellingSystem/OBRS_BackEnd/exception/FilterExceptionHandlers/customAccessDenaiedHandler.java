@@ -11,21 +11,15 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 
 @Component
-public class customAccessDenaiedHandler implements AccessDeniedHandler
-{
+public class customAccessDenaiedHandler implements AccessDeniedHandler {
     @Override
-    public void handle(HttpServletRequest req, HttpServletResponse res, AccessDeniedException msg) throws IOException, ServletException
-    {
+    public void handle(HttpServletRequest req, HttpServletResponse res, AccessDeniedException msg) throws IOException, ServletException {
         res.setStatus(HttpServletResponse.SC_FORBIDDEN);
         res.setContentType("application/json");
-        res.getWriter().write("""
-                {
-                "timestamps:"%s",
-                "status":403,
-                "error":"forbidden",
-                "message":"%s",
-                "path":"%s"
-                }
-                """.formatted(LocalDateTime.now(),msg.getMessage(),req.getRequestURI()));
+        String body = String.format("{\"timestamp\":\"%s\",\"status\":403,\"error\":\"Forbidden\",\"message\":\"%s\",\"path\":\"%s\"}",
+                LocalDateTime.now(),
+                msg.getMessage(),
+                req.getRequestURI());
+        res.getWriter().write(body);
     }
 }

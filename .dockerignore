@@ -1,0 +1,10 @@
+.git
+.idea
+target
+logs
+untitled
+untitled1
+.env
+*.iml
+*.ipr
+*.iws
