@@ -240,7 +240,7 @@ cloudinary_apisk=
 <h2>▶️ Run Locally</h2>
 
 <pre>
-git clone &lt;your-repo-url&gt;
+git clone &lt;https://github.com/Faulty-coder-WAP/OnlineBookResellingSystem-FC&gt;
 cd OnlineBookResellingSystem
 ./mvnw spring-boot:run
 </pre>
