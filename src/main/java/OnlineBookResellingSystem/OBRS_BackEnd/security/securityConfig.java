@@ -42,12 +42,12 @@ public class securityConfig
         return request
                 .csrf(AbstractHttpConfigurer::disable)
                 .sessionManagement(ses -> ses.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-                .authorizeHttpRequests(req ->
-                        req.requestMatchers("/auth/login", "/api/register", "/books/getbooks").permitAll()
+                .authorizeHttpRequests(req -> req
+                                .requestMatchers("/auth/login", "/api/register", "/books/getbooks","/api/greet/**","/").permitAll()
                                 .requestMatchers("/admin/**").hasRole("ADMIN")
-                                .requestMatchers("/swagger-ui/**", "/v3/**", "/swagger-ui.html").hasRole("ADMIN")
+                                .requestMatchers("/swagger-ui/**", "/v3/**", "/swagger-ui.html").permitAll()
                                 .requestMatchers("/books/addbook", "/api/update_user/**").hasRole("USER")
-                                .requestMatchers(HttpMethod.GET, "/api/greet/**", "/api/get_users").hasRole("ADMIN")
+                                .requestMatchers(HttpMethod.GET, "/api/get_users").hasRole("ADMIN")
                                 .anyRequest().authenticated())
                 .exceptionHandling(exception -> exception
                         .authenticationEntryPoint(authenticationEntryPoinyHandler)
