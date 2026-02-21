@@ -24,23 +24,23 @@
 
 <hr/>
 
-<h2>🚀 Features</h2>
+<h2>Features</h2>
 
 <ul>
-  <li>✅ JWT-based Authentication (60 min expiry)</li>
-  <li>✅ Role-Based Authorization (USER / ADMIN)</li>
-  <li>✅ Secure RESTful APIs</li>
-  <li>✅ Book Image Upload (Cloudinary Integration)</li>
-  <li>✅ Pagination & Sorting</li>
-  <li>✅ Structured Error Handling</li>
-  <li>✅ Environment-Based Configuration (dev / prod)</li>
-  <li>✅ Logging with Logback</li>
-  <li>✅ Production Deployment on Render</li>
+  <li>JWT-based Authentication (60 min expiry)</li>
+  <li>Role-Based Authorization (USER / ADMIN)</li>
+  <li>Secure RESTful APIs</li>
+  <li>Book Image Upload (Cloudinary Integration)</li>
+  <li>Pagination & Sorting</li>
+  <li>Structured Error Handling</li>
+  <li>Environment-Based Configuration (dev / prod)</li>
+  <li>Logging with Logback</li>
+  <li>Production Deployment on Render</li>
 </ul>
 
 <hr/>
 
-<h2>🏗️ Architecture</h2>
+<h2>Architecture</h2>
 
 <pre>
 Client → Controller → Service → Repository → Database
@@ -59,7 +59,7 @@ Client → Controller → Service → Repository → Database
 
 <hr/>
 
-<h2>🛠️ Tech Stack</h2>
+<h2>Tech Stack</h2>
 
 <h3>🔹 Backend</h3>
 <ul>
@@ -90,21 +90,21 @@ Client → Controller → Service → Repository → Database
 
 <hr/>
 
-<h2>🔐 Authentication & Authorization</h2>
+<h2>Authentication & Authorization</h2>
 
-<h3>🔑 Login</h3>
+<h3> Login</h3>
 <pre>
 POST /auth/login
 </pre>
 <p>Returns JWT token.</p>
 
-<h3>👤 Roles</h3>
+<h3>Roles</h3>
 <ul>
   <li><b>USER</b> → Add / Update Books</li>
   <li><b>ADMIN</b> → Approve Books & Manage Users</li>
 </ul>
 
-<h3>📌 Protected Routes Example</h3>
+<h3>Protected Routes Example</h3>
 
 <pre>
 POST   /books/addbook        (USER)
@@ -120,7 +120,7 @@ Authorization: Bearer &lt;jwt_token&gt;
 
 <hr/>
 
-<h2>📦 API Endpoints</h2>
+<h2>API Endpoints</h2>
 
 <h3>🔹 Auth</h3>
 
@@ -189,9 +189,9 @@ Authorization: Bearer &lt;jwt_token&gt;
 
 <hr/>
 
-<h2>🗄️ Data Model</h2>
+<h2>Data Model</h2>
 
-<h3>👤 User</h3>
+<h3>User</h3>
 <ul>
   <li>user_id (PK)</li>
   <li>userName</li>
@@ -200,7 +200,7 @@ Authorization: Bearer &lt;jwt_token&gt;
   <li>roles (ADMIN / USER)</li>
 </ul>
 
-<h3>📘 Book</h3>
+<h3>Book</h3>
 <ul>
   <li>bookId (PK)</li>
   <li>bookName</li>
@@ -221,7 +221,7 @@ ADMIN approves → status = ACTIVE
 
 <hr/>
 
-<h2>⚙️ Environment Configuration</h2>
+<h2>Environment Configuration</h2>
 
 <pre>
 SPRING_PROFILES_ACTIVE=prod
@@ -237,7 +237,7 @@ cloudinary_apisk=
 
 <hr/>
 
-<h2>▶️ Run Locally</h2>
+<h2>Run Locally</h2>
 
 <pre>
 git clone &lt;https://github.com/Faulty-coder-WAP/OnlineBookResellingSystem-FC&gt;
@@ -253,7 +253,7 @@ http://localhost:8000
 
 <hr/>
 
-<h2>🧪 Testing</h2>
+<h2>Testing</h2>
 
 <ul>
   <li>API tested using Postman</li>
@@ -263,7 +263,7 @@ http://localhost:8000
 
 <hr/>
 
-<h2>🔮 Future Improvements</h2>
+<h2>Future Improvements</h2>
 
 <ul>
   <li>Refresh Tokens</li>
@@ -276,7 +276,7 @@ http://localhost:8000
 
 <hr/>
 
-<h2>👨‍💻 Creator</h2>
+<h2>Creator</h2>
 
 <p>
   <b>Sai Ganesh</b><br/>
