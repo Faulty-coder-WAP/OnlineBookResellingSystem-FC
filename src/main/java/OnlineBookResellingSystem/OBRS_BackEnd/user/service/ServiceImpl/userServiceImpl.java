@@ -13,6 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -65,6 +66,7 @@ public class userServiceImpl implements userService
     }
 
     @Override
+    @Transactional
     public ResponseEntity<List<userListDto>> getAllUsers()
     {
         List<User> data=repo.findAll();

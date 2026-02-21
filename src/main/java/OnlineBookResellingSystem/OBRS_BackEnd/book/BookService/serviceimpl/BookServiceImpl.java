@@ -18,6 +18,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.authentication.AuthenticationServiceException;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
@@ -38,6 +39,7 @@ public class BookServiceImpl implements BookService
     private ClodinaryService clodinaryService;
 
     @Override
+    @Transactional
     public bookdetails_dto addbook(CustomUserDetails user, bookdetails_dto bookdata, MultipartFile image)  {
 
         BooKDetails data=new BooKDetails();
@@ -66,6 +68,7 @@ public class BookServiceImpl implements BookService
     }
 
     @Override
+    @Transactional
     public List<responseBookDto> returnAllBooks(String status,String search,Pageable pageable) {
 
         if (search == null) {

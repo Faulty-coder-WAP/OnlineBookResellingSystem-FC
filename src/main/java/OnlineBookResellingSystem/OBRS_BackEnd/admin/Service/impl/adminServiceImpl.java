@@ -8,6 +8,7 @@ import OnlineBookResellingSystem.OBRS_BackEnd.exception.bookNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -18,6 +19,7 @@ public class adminServiceImpl implements adminService
     private BookRepository repo;
 
     @Override
+    @Transactional
     public List<responseBookDto> returnAllBooks()
     {
         List<responseBookDto> response=repo.findByStatus("PENDING")
