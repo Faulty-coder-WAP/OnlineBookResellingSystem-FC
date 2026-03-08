@@ -1,24 +1,24 @@
-2026-02-21 12:30:12 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
-2026-02-21 12:30:12 INFO  [restartedMain] O.O.ObrsBackEndApplication - Starting ObrsBackEndApplication using Java 23.0.1 with PID 8484 (V:\OnlineBookResillingSystem\OBRS-BackEnd\target\classes started by saiganesh in V:\OnlineBookResillingSystem\OBRS-BackEnd)
-2026-02-21 12:30:12 INFO  [restartedMain] O.O.ObrsBackEndApplication - The following 1 profile is active: "dev"
-2026-02-21 12:30:13 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-02-21 12:30:13 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-02-21 12:30:14 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-21 12:30:14 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 89 ms. Found 2 JPA repository interfaces.
-2026-02-21 12:30:16 INFO  [restartedMain] o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8000 (http)
-2026-02-21 12:30:16 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8000"]
-2026-02-21 12:30:16 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
-2026-02-21 12:30:16 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
-2026-02-21 12:30:16 INFO  [restartedMain] o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 3432 ms
-2026-02-21 12:30:16 INFO  [restartedMain] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-02-21 12:30:16 INFO  [restartedMain] org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.1.Final
-2026-02-21 12:30:17 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-02-21 12:30:17 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2026-02-21 12:30:18 WARN  [restartedMain] org.hibernate.orm.jdbc.error - HHH000247: ErrorCode: 0, SQLState: 08S01
-2026-02-21 12:30:18 WARN  [restartedMain] org.hibernate.orm.jdbc.error - Communications link failure
+2026-03-08 19:02:20 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-03-08 19:02:20 INFO  [restartedMain] O.O.ObrsBackEndApplication - Starting ObrsBackEndApplication using Java 23.0.1 with PID 2380 (V:\OnlineBookResillingSystem\OBRS-BackEnd\target\classes started by saiganesh in V:\OnlineBookResillingSystem\OBRS-BackEnd)
+2026-03-08 19:02:20 INFO  [restartedMain] O.O.ObrsBackEndApplication - The following 1 profile is active: "dev"
+2026-03-08 19:02:21 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-08 19:02:21 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-08 19:02:23 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-08 19:02:23 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 80 ms. Found 2 JPA repository interfaces.
+2026-03-08 19:02:24 INFO  [restartedMain] o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8000 (http)
+2026-03-08 19:02:24 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8000"]
+2026-03-08 19:02:24 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-08 19:02:24 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-03-08 19:02:24 INFO  [restartedMain] o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 3051 ms
+2026-03-08 19:02:24 INFO  [restartedMain] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-08 19:02:24 INFO  [restartedMain] org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.1.Final
+2026-03-08 19:02:24 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-08 19:02:25 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-08 19:02:26 WARN  [restartedMain] org.hibernate.orm.jdbc.error - HHH000247: ErrorCode: 0, SQLState: 08S01
+2026-03-08 19:02:26 WARN  [restartedMain] org.hibernate.orm.jdbc.error - Communications link failure
 
 The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-2026-02-21 12:30:18 WARN  [restartedMain] org.hibernate.orm.jdbc - HHH100046: Could not obtain connection to query JDBC database metadata
+2026-03-08 19:02:26 WARN  [restartedMain] org.hibernate.orm.jdbc - HHH100046: Could not obtain connection to query JDBC database metadata
 org.hibernate.exception.JDBCConnectionException: Unable to obtain isolated JDBC connection [Communications link failure
 
 The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.] [n/a]
@@ -112,13 +112,13 @@ Caused by: java.net.ConnectException: Connection refused: getsockopt
 	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:144)
 	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:53)
 	... 56 common frames omitted
-2026-02-21 12:30:18 ERROR [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
-2026-02-21 12:30:18 WARN  [restartedMain] o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
-2026-02-21 12:30:18 INFO  [restartedMain] o.a.catalina.core.StandardService - Stopping service [Tomcat]
-2026-02-21 12:30:18 INFO  [restartedMain] o.s.b.a.l.ConditionEvaluationReportLogger - 
+2026-03-08 19:02:26 ERROR [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2026-03-08 19:02:26 WARN  [restartedMain] o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2026-03-08 19:02:26 INFO  [restartedMain] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-03-08 19:02:26 INFO  [restartedMain] o.s.b.a.l.ConditionEvaluationReportLogger - 
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2026-02-21 12:30:18 ERROR [restartedMain] o.s.boot.SpringApplication - Application run failed
+2026-03-08 19:02:26 ERROR [restartedMain] o.s.boot.SpringApplication - Application run failed
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
@@ -169,25 +169,25 @@ Caused by: org.hibernate.HibernateException: Unable to determine Dialect without
 	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:133)
 	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:260)
 	... 34 common frames omitted
-2026-02-21 12:30:56 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
-2026-02-21 12:30:56 INFO  [restartedMain] O.O.ObrsBackEndApplication - Starting ObrsBackEndApplication using Java 23.0.1 with PID 12056 (V:\OnlineBookResillingSystem\OBRS-BackEnd\target\classes started by saiganesh in V:\OnlineBookResillingSystem\OBRS-BackEnd)
-2026-02-21 12:30:56 INFO  [restartedMain] O.O.ObrsBackEndApplication - The following 1 profile is active: "dev"
-2026-02-21 12:30:56 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-02-21 12:30:56 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-02-21 12:30:57 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-21 12:30:57 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 65 ms. Found 2 JPA repository interfaces.
-2026-02-21 12:30:58 INFO  [restartedMain] o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8000 (http)
-2026-02-21 12:30:58 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8000"]
-2026-02-21 12:30:58 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
-2026-02-21 12:30:58 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
-2026-02-21 12:30:58 INFO  [restartedMain] o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1883 ms
-2026-02-21 12:30:58 INFO  [restartedMain] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-02-21 12:30:58 INFO  [restartedMain] org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.1.Final
-2026-02-21 12:30:58 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-02-21 12:30:59 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2026-02-21 12:30:59 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@48421de9
-2026-02-21 12:30:59 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2026-02-21 12:30:59 INFO  [restartedMain] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+2026-03-08 19:02:51 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
+2026-03-08 19:02:52 INFO  [restartedMain] O.O.ObrsBackEndApplication - Starting ObrsBackEndApplication using Java 23.0.1 with PID 7380 (V:\OnlineBookResillingSystem\OBRS-BackEnd\target\classes started by saiganesh in V:\OnlineBookResillingSystem\OBRS-BackEnd)
+2026-03-08 19:02:52 INFO  [restartedMain] O.O.ObrsBackEndApplication - The following 1 profile is active: "dev"
+2026-03-08 19:02:52 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-08 19:02:52 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-08 19:02:53 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-08 19:02:53 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 65 ms. Found 2 JPA repository interfaces.
+2026-03-08 19:02:53 INFO  [restartedMain] o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8000 (http)
+2026-03-08 19:02:53 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8000"]
+2026-03-08 19:02:53 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-03-08 19:02:53 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-03-08 19:02:53 INFO  [restartedMain] o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1812 ms
+2026-03-08 19:02:54 INFO  [restartedMain] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-03-08 19:02:54 INFO  [restartedMain] org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.1.Final
+2026-03-08 19:02:54 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-08 19:02:54 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-03-08 19:02:55 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@19c78c4b
+2026-03-08 19:02:55 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-03-08 19:02:55 INFO  [restartedMain] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
 	Database JDBC URL [jdbc:mysql://localhost:3306/obrs]
 	Database driver: MySQL Connector/J
 	Database dialect: MySQLDialect
@@ -199,295 +199,20 @@ Caused by: org.hibernate.HibernateException: Unable to determine Dialect without
 	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-02-21 12:31:00 INFO  [restartedMain] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-02-21 12:31:01 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-02-21 12:31:01 INFO  [restartedMain] o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-02-21 12:31:02 INFO  [restartedMain] o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
-2026-02-21 12:31:02 WARN  [restartedMain] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
-2026-02-21 12:31:04 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8000"]
-2026-02-21 12:31:04 INFO  [restartedMain] o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8000 (http) with context path '/'
-2026-02-21 12:31:04 INFO  [restartedMain] O.O.ObrsBackEndApplication - Started ObrsBackEndApplication in 8.63 seconds (process running for 9.376)
-2026-02-21 12:31:30 INFO  [http-nio-8000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-02-21 12:31:30 INFO  [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2026-02-21 12:31:30 INFO  [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
-2026-02-21 12:31:55 INFO  [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2026-02-21 12:31:55 INFO  [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
-2026-02-21 12:31:55 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-02-21 12:31:55 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2026-02-21 12:31:55 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2026-02-21 12:32:01 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
-2026-02-21 12:32:01 INFO  [restartedMain] O.O.ObrsBackEndApplication - Starting ObrsBackEndApplication using Java 23.0.1 with PID 11128 (V:\OnlineBookResillingSystem\OBRS-BackEnd\target\classes started by saiganesh in V:\OnlineBookResillingSystem\OBRS-BackEnd)
-2026-02-21 12:32:01 INFO  [restartedMain] O.O.ObrsBackEndApplication - The following 1 profile is active: "dev"
-2026-02-21 12:32:01 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-02-21 12:32:01 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-02-21 12:32:02 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-21 12:32:02 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 68 ms. Found 2 JPA repository interfaces.
-2026-02-21 12:32:03 INFO  [restartedMain] o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8000 (http)
-2026-02-21 12:32:03 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8000"]
-2026-02-21 12:32:03 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
-2026-02-21 12:32:03 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
-2026-02-21 12:32:03 INFO  [restartedMain] o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1946 ms
-2026-02-21 12:32:03 INFO  [restartedMain] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-02-21 12:32:03 INFO  [restartedMain] org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.1.Final
-2026-02-21 12:32:04 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-02-21 12:32:04 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2026-02-21 12:32:04 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1bb571a0
-2026-02-21 12:32:04 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2026-02-21 12:32:04 INFO  [restartedMain] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3306/obrs]
-	Database driver: MySQL Connector/J
-	Database dialect: MySQLDialect
-	Database version: 8.0.40
-	Default catalog/schema: obrs/undefined
-	Autocommit mode: undefined/unknown
-	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-02-21 12:32:06 INFO  [restartedMain] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-02-21 12:32:06 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-02-21 12:32:06 INFO  [restartedMain] o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-02-21 12:32:07 INFO  [restartedMain] o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
-2026-02-21 12:32:07 WARN  [restartedMain] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
-2026-02-21 12:32:08 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8000"]
-2026-02-21 12:32:08 INFO  [restartedMain] o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8000 (http) with context path '/'
-2026-02-21 12:32:08 INFO  [restartedMain] O.O.ObrsBackEndApplication - Started ObrsBackEndApplication in 7.745 seconds (process running for 8.655)
-2026-02-21 12:32:12 INFO  [http-nio-8000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-02-21 12:32:12 INFO  [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2026-02-21 12:32:12 INFO  [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
-2026-02-21 12:32:57 INFO  [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2026-02-21 12:32:57 INFO  [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
-2026-02-21 12:32:57 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-02-21 12:32:57 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2026-02-21 12:32:57 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2026-02-21 12:33:02 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
-2026-02-21 12:33:02 INFO  [restartedMain] O.O.ObrsBackEndApplication - Starting ObrsBackEndApplication using Java 23.0.1 with PID 14296 (V:\OnlineBookResillingSystem\OBRS-BackEnd\target\classes started by saiganesh in V:\OnlineBookResillingSystem\OBRS-BackEnd)
-2026-02-21 12:33:02 INFO  [restartedMain] O.O.ObrsBackEndApplication - The following 1 profile is active: "dev"
-2026-02-21 12:33:02 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-02-21 12:33:02 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-02-21 12:33:03 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-21 12:33:03 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 68 ms. Found 2 JPA repository interfaces.
-2026-02-21 12:33:04 INFO  [restartedMain] o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8000 (http)
-2026-02-21 12:33:04 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8000"]
-2026-02-21 12:33:04 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
-2026-02-21 12:33:04 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
-2026-02-21 12:33:04 INFO  [restartedMain] o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1828 ms
-2026-02-21 12:33:04 INFO  [restartedMain] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-02-21 12:33:04 INFO  [restartedMain] org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.1.Final
-2026-02-21 12:33:05 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-02-21 12:33:05 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2026-02-21 12:33:05 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@654de91a
-2026-02-21 12:33:05 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2026-02-21 12:33:05 INFO  [restartedMain] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3306/obrs]
-	Database driver: MySQL Connector/J
-	Database dialect: MySQLDialect
-	Database version: 8.0.40
-	Default catalog/schema: obrs/undefined
-	Autocommit mode: undefined/unknown
-	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-02-21 12:33:07 INFO  [restartedMain] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-02-21 12:33:07 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-02-21 12:33:07 INFO  [restartedMain] o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-02-21 12:33:08 INFO  [restartedMain] o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
-2026-02-21 12:33:08 WARN  [restartedMain] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
-2026-02-21 12:33:09 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8000"]
-2026-02-21 12:33:09 INFO  [restartedMain] o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8000 (http) with context path '/'
-2026-02-21 12:33:09 INFO  [restartedMain] O.O.ObrsBackEndApplication - Started ObrsBackEndApplication in 7.594 seconds (process running for 8.362)
-2026-02-21 12:33:15 INFO  [http-nio-8000-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-02-21 12:33:15 INFO  [http-nio-8000-exec-2] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2026-02-21 12:33:15 INFO  [http-nio-8000-exec-2] o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
-2026-02-21 12:33:56 INFO  [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2026-02-21 12:33:56 INFO  [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
-2026-02-21 12:33:56 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-02-21 12:33:56 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2026-02-21 12:33:56 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2026-02-21 12:34:03 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
-2026-02-21 12:34:03 INFO  [restartedMain] O.O.ObrsBackEndApplication - Starting ObrsBackEndApplication using Java 23.0.1 with PID 14092 (V:\OnlineBookResillingSystem\OBRS-BackEnd\target\classes started by saiganesh in V:\OnlineBookResillingSystem\OBRS-BackEnd)
-2026-02-21 12:34:03 INFO  [restartedMain] O.O.ObrsBackEndApplication - The following 1 profile is active: "dev"
-2026-02-21 12:34:03 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-02-21 12:34:03 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-02-21 12:34:04 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-21 12:34:05 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 76 ms. Found 2 JPA repository interfaces.
-2026-02-21 12:34:05 INFO  [restartedMain] o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8000 (http)
-2026-02-21 12:34:05 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8000"]
-2026-02-21 12:34:05 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
-2026-02-21 12:34:05 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
-2026-02-21 12:34:05 INFO  [restartedMain] o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2496 ms
-2026-02-21 12:34:06 INFO  [restartedMain] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-02-21 12:34:06 INFO  [restartedMain] org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.1.Final
-2026-02-21 12:34:06 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-02-21 12:34:06 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2026-02-21 12:34:07 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2fcc7d1e
-2026-02-21 12:34:07 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2026-02-21 12:34:07 INFO  [restartedMain] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3306/obrs]
-	Database driver: MySQL Connector/J
-	Database dialect: MySQLDialect
-	Database version: 8.0.40
-	Default catalog/schema: obrs/undefined
-	Autocommit mode: undefined/unknown
-	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-02-21 12:34:08 INFO  [restartedMain] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-02-21 12:34:08 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-02-21 12:34:08 INFO  [restartedMain] o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-02-21 12:34:10 INFO  [restartedMain] o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
-2026-02-21 12:34:10 WARN  [restartedMain] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
-2026-02-21 12:34:11 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8000"]
-2026-02-21 12:34:11 INFO  [restartedMain] o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8000 (http) with context path '/'
-2026-02-21 12:34:11 INFO  [restartedMain] O.O.ObrsBackEndApplication - Started ObrsBackEndApplication in 9.151 seconds (process running for 10.089)
-2026-02-21 12:34:23 INFO  [http-nio-8000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-02-21 12:34:23 INFO  [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2026-02-21 12:34:23 INFO  [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
-2026-02-21 12:34:24 INFO  [http-nio-8000-exec-10] o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 497 ms
-2026-02-21 12:36:29 INFO  [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2026-02-21 12:36:29 INFO  [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
-2026-02-21 12:36:29 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-02-21 12:36:29 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2026-02-21 12:36:29 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2026-02-21 12:36:35 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
-2026-02-21 12:36:35 INFO  [restartedMain] O.O.ObrsBackEndApplication - Starting ObrsBackEndApplication using Java 23.0.1 with PID 1956 (V:\OnlineBookResillingSystem\OBRS-BackEnd\target\classes started by saiganesh in V:\OnlineBookResillingSystem\OBRS-BackEnd)
-2026-02-21 12:36:35 INFO  [restartedMain] O.O.ObrsBackEndApplication - The following 1 profile is active: "dev"
-2026-02-21 12:36:35 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-02-21 12:36:35 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-02-21 12:36:36 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-21 12:36:36 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 67 ms. Found 2 JPA repository interfaces.
-2026-02-21 12:36:37 INFO  [restartedMain] o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8000 (http)
-2026-02-21 12:36:37 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8000"]
-2026-02-21 12:36:37 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
-2026-02-21 12:36:37 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
-2026-02-21 12:36:37 INFO  [restartedMain] o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 1910 ms
-2026-02-21 12:36:37 INFO  [restartedMain] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-02-21 12:36:37 INFO  [restartedMain] org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.1.Final
-2026-02-21 12:36:38 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-02-21 12:36:38 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2026-02-21 12:36:38 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@654de91a
-2026-02-21 12:36:38 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2026-02-21 12:36:39 INFO  [restartedMain] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3306/obrs]
-	Database driver: MySQL Connector/J
-	Database dialect: MySQLDialect
-	Database version: 8.0.40
-	Default catalog/schema: obrs/undefined
-	Autocommit mode: undefined/unknown
-	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-02-21 12:36:40 INFO  [restartedMain] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-02-21 12:36:40 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-02-21 12:36:40 INFO  [restartedMain] o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-02-21 12:36:41 INFO  [restartedMain] o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
-2026-02-21 12:36:42 WARN  [restartedMain] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
-2026-02-21 12:36:42 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8000"]
-2026-02-21 12:36:42 INFO  [restartedMain] o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8000 (http) with context path '/'
-2026-02-21 12:36:42 INFO  [restartedMain] O.O.ObrsBackEndApplication - Started ObrsBackEndApplication in 7.96 seconds (process running for 8.759)
-2026-02-21 12:36:47 INFO  [http-nio-8000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-02-21 12:36:47 INFO  [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2026-02-21 12:36:47 INFO  [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
-2026-02-21 12:36:48 INFO  [http-nio-8000-exec-9] o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 532 ms
-2026-02-21 12:37:18 INFO  [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2026-02-21 12:37:18 INFO  [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
-2026-02-21 12:37:18 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-02-21 12:37:18 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2026-02-21 12:37:18 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2026-02-21 12:37:24 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
-2026-02-21 12:37:24 INFO  [restartedMain] O.O.ObrsBackEndApplication - Starting ObrsBackEndApplication using Java 23.0.1 with PID 7348 (V:\OnlineBookResillingSystem\OBRS-BackEnd\target\classes started by saiganesh in V:\OnlineBookResillingSystem\OBRS-BackEnd)
-2026-02-21 12:37:24 INFO  [restartedMain] O.O.ObrsBackEndApplication - The following 1 profile is active: "dev"
-2026-02-21 12:37:24 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-02-21 12:37:24 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-02-21 12:37:25 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-21 12:37:26 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 76 ms. Found 2 JPA repository interfaces.
-2026-02-21 12:37:26 INFO  [restartedMain] o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8000 (http)
-2026-02-21 12:37:26 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8000"]
-2026-02-21 12:37:26 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
-2026-02-21 12:37:26 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
-2026-02-21 12:37:26 INFO  [restartedMain] o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2522 ms
-2026-02-21 12:37:27 INFO  [restartedMain] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-02-21 12:37:27 INFO  [restartedMain] org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.1.Final
-2026-02-21 12:37:27 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-02-21 12:37:27 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2026-02-21 12:37:28 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3392d816
-2026-02-21 12:37:28 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2026-02-21 12:37:28 INFO  [restartedMain] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3306/obrs]
-	Database driver: MySQL Connector/J
-	Database dialect: MySQLDialect
-	Database version: 8.0.40
-	Default catalog/schema: obrs/undefined
-	Autocommit mode: undefined/unknown
-	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-02-21 12:37:30 INFO  [restartedMain] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-02-21 12:37:30 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-02-21 12:37:30 INFO  [restartedMain] o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-02-21 12:37:32 INFO  [restartedMain] o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
-2026-02-21 12:37:32 WARN  [restartedMain] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
-2026-02-21 12:37:33 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8000"]
-2026-02-21 12:37:33 INFO  [restartedMain] o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8000 (http) with context path '/'
-2026-02-21 12:37:33 INFO  [restartedMain] O.O.ObrsBackEndApplication - Started ObrsBackEndApplication in 9.463 seconds (process running for 10.242)
-2026-02-21 12:38:14 INFO  [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2026-02-21 12:38:14 INFO  [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
-2026-02-21 12:38:14 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-02-21 12:38:14 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2026-02-21 12:38:14 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2026-02-21 12:38:21 INFO  [background-preinit] o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.0.1.Final
-2026-02-21 12:38:21 INFO  [restartedMain] O.O.ObrsBackEndApplication - Starting ObrsBackEndApplication using Java 23.0.1 with PID 10376 (V:\OnlineBookResillingSystem\OBRS-BackEnd\target\classes started by saiganesh in V:\OnlineBookResillingSystem\OBRS-BackEnd)
-2026-02-21 12:38:21 INFO  [restartedMain] O.O.ObrsBackEndApplication - The following 1 profile is active: "dev"
-2026-02-21 12:38:21 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-02-21 12:38:21 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-02-21 12:38:22 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-02-21 12:38:22 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 63 ms. Found 2 JPA repository interfaces.
-2026-02-21 12:38:23 INFO  [restartedMain] o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8000 (http)
-2026-02-21 12:38:23 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8000"]
-2026-02-21 12:38:23 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
-2026-02-21 12:38:23 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.15]
-2026-02-21 12:38:23 INFO  [restartedMain] o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2095 ms
-2026-02-21 12:38:23 INFO  [restartedMain] org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
-2026-02-21 12:38:23 INFO  [restartedMain] org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.2.1.Final
-2026-02-21 12:38:24 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-02-21 12:38:24 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2026-02-21 12:38:24 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@56e6bc49
-2026-02-21 12:38:24 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2026-02-21 12:38:24 INFO  [restartedMain] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3306/obrs]
-	Database driver: MySQL Connector/J
-	Database dialect: MySQLDialect
-	Database version: 8.0.40
-	Default catalog/schema: obrs/undefined
-	Autocommit mode: undefined/unknown
-	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
-	JDBC fetch size: none
-	Pool: DataSourceConnectionProvider
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-02-21 12:38:25 INFO  [restartedMain] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-02-21 12:38:25 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-02-21 12:38:25 INFO  [restartedMain] o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-02-21 12:38:27 INFO  [restartedMain] o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
-2026-02-21 12:38:27 WARN  [restartedMain] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
-2026-02-21 12:38:28 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8000"]
-2026-02-21 12:38:28 INFO  [restartedMain] o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8000 (http) with context path '/'
-2026-02-21 12:38:28 INFO  [restartedMain] O.O.ObrsBackEndApplication - Started ObrsBackEndApplication in 7.866 seconds (process running for 8.725)
-2026-02-21 12:38:37 INFO  [http-nio-8000-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-02-21 12:38:37 INFO  [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2026-02-21 12:38:37 INFO  [http-nio-8000-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-2026-02-21 12:38:38 INFO  [http-nio-8000-exec-9] o.s.api.AbstractOpenApiResource - Init duration for springdoc-openapi is: 495 ms
-2026-02-21 12:50:48 INFO  [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
-2026-02-21 12:50:48 INFO  [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
-2026-02-21 12:50:48 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-2026-02-21 12:50:48 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2026-02-21 12:50:48 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-03-08 19:02:56 INFO  [restartedMain] org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-08 19:02:56 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-08 19:02:56 INFO  [restartedMain] o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-08 19:02:58 INFO  [restartedMain] o.s.s.c.a.a.c.InitializeAuthenticationProviderBeanManagerConfigurer$InitializeAuthenticationProviderManagerConfigurer - Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-03-08 19:02:58 WARN  [restartedMain] o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-03-08 19:02:59 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8000"]
+2026-03-08 19:02:59 INFO  [restartedMain] o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8000 (http) with context path '/'
+2026-03-08 19:02:59 INFO  [restartedMain] O.O.ObrsBackEndApplication - Started ObrsBackEndApplication in 8.042 seconds (process running for 8.786)
+2026-03-08 19:04:37 INFO  [http-nio-8000-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-08 19:04:37 INFO  [http-nio-8000-exec-2] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-03-08 19:04:37 INFO  [http-nio-8000-exec-2] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-03-08 19:04:37 WARN  [http-nio-8000-exec-2] o.s.w.s.h.HandlerMappingIntrospector - Cache miss for REQUEST dispatch to '/books/getbooks' (previous null). Performing CorsConfiguration lookup. This is logged once only at WARN level, and every time at TRACE.
+2026-03-08 19:34:08 INFO  [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-03-08 19:34:08 INFO  [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-03-08 19:34:08 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-03-08 19:34:08 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-03-08 19:34:08 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

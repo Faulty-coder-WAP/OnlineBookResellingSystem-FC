@@ -11,6 +11,7 @@ import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
+import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -23,8 +24,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 @Configuration
 @EnableWebSecurity
-public class securityConfig
-{
+public class securityConfig {
     @Autowired
     private JwtFilter jwtFilter;
     @Autowired
@@ -37,18 +37,18 @@ public class securityConfig
     private customAccessDenaiedHandler accessDenaiedHandler;
 
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity request)
-    {
+    public SecurityFilterChain securityFilterChain(HttpSecurity request) {
         return request
                 .csrf(AbstractHttpConfigurer::disable)
+                .cors(Customizer.withDefaults())
                 .sessionManagement(ses -> ses.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(req -> req
-                                .requestMatchers("/auth/login", "/api/register", "/books/getbooks","/api/greet/**","/").permitAll()
-                                .requestMatchers("/admin/**").hasRole("ADMIN")
-                                .requestMatchers("/swagger-ui/**", "/v3/**", "/swagger-ui.html").permitAll()
-                                .requestMatchers("/books/addbook", "/api/update_user/**").hasRole("USER")
-                                .requestMatchers(HttpMethod.GET, "/api/get_users").hasRole("ADMIN")
-                                .anyRequest().authenticated())
+                        .requestMatchers("/auth/login", "/api/register", "/books/getbooks", "/api/greet/**", "/").permitAll()
+                        .requestMatchers("/admin/**").hasRole("ADMIN")
+                        .requestMatchers("/swagger-ui/**", "/v3/**", "/swagger-ui.html").permitAll()
+                        .requestMatchers("/books/addbook", "/api/update_user/**").hasRole("USER")
+                        .requestMatchers(HttpMethod.GET, "/api/get_users").hasRole("ADMIN")
+                        .anyRequest().authenticated())
                 .exceptionHandling(exception -> exception
                         .authenticationEntryPoint(authenticationEntryPoinyHandler)
                         .accessDeniedHandler(accessDenaiedHandler))
@@ -59,14 +59,12 @@ public class securityConfig
     }
 
     @Bean
-    public PasswordEncoder passwordEncoder()
-    {
+    public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder(12);
     }
 
     @Bean
-    public AuthenticationProvider authenticationProvider()
-    {
+    public AuthenticationProvider authenticationProvider() {
         DaoAuthenticationProvider dao = new DaoAuthenticationProvider(userDetails);
         dao.setPasswordEncoder(passwordEncoder());
         return dao;
@@ -74,8 +72,7 @@ public class securityConfig
 
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration configuration)
-            throws Exception
-    {
+            throws Exception {
         return configuration.getAuthenticationManager();
     }
 }
